@@ -28,7 +28,7 @@ export class InstancedMesh2<T extends InstancedEntity = InstancedEntity, G exten
   public declare type: 'InstancedMesh2';
   public declare isInstancedMesh2: true;
   public instances: T[];
-  /** @internal */ public _perObjectFrustumCulled = false;
+  /** @internal */ public _perObjectFrustumCulled = true;
   /** @internal */ public _internalInstances: T[];
   private _sortComparer = (a: InstancedEntity, b: InstancedEntity) => a._internalId - b._internalId;
   private _behaviour: InstanceMesh2Behaviour;
