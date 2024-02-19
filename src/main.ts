@@ -3,7 +3,6 @@ import { AmbientLight, BufferGeometry, BufferGeometryLoader, Group, Material, Me
 import { FlyControls } from 'three/examples/jsm/controls/FlyControls';
 import { InstancedMesh2 } from './InstancedMesh2';
 import { GLTF, GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
-import { vec3 } from 'three/examples/jsm/nodes/shadernode/ShaderNode';
 
 const main = new Main({ rendererParameters: { antialias: true } }); // init renderer and other stuff
 const scene = new Scene();
