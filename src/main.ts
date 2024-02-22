@@ -14,15 +14,15 @@ controls.rollSpeed = Math.PI / 100;
 controls.movementSpeed = 10;
 scene.on('animate', (e) => controls.update(e.delta));
 
-Asset.preload(GLTFLoader, 'albero.glb');
+Asset.preload(GLTFLoader, 'albero-iconsphare.glb');
 
 await Asset.preloadAllPending({ onProgress: (e) => console.log(e * 100 + '%'), onError: (e) => console.error(e) });
 
-const gltf = Asset.get<GLTF>('albero.glb');
+const gltf = Asset.get<GLTF>('albero-iconsphare.glb');
 
 console.log(gltf);
 
-const group = gltf.scene.children[0] as Group;
+const group = gltf.scene as Group;
 
 const trunk = new InstancedMesh2({
   geometry: (group.children[0] as Mesh).geometry,
